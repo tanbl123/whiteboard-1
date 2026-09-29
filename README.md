@@ -259,7 +259,7 @@ php src/p1.php
 |---|---|---|---|
 | 1. Sorting | Bubble sort (no library functions) | O(n²) | O(1) |
 | 2. FizzBuzz | Check divisibility by 15 first, then 3, then 5 | O(n) | O(n) |
-| 3. Fibonacci | Recursion that builds the sequence one number per call | O(n²) | O(n) call stack |call stack |
+| 3. Fibonacci | Recursion that builds the sequence one number per call | O(n²) | O(n) call stack |
 | 4. Intersection | Nested loops with a duplicate check | O(n × m) | O(k) |
 | 5. Symmetric difference | Two passes: keep items not found in the other list | O(n × m) | O(k) |
 | 6. Max occurrence | Split into characters, count letters/digits, find the maximum | O(n²) | O(n) |
