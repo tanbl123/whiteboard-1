@@ -259,15 +259,13 @@ php src/p1.php
 |---|---|---|---|
 | 1. Sorting | Bubble sort (no library functions) | O(n²) | O(1) |
 | 2. FizzBuzz | Check divisibility by 15 first, then 3, then 5 | O(n) | O(n) |
-| 3. Fibonacci | Recursion that builds the sequence one number per call | O(n²)* | O(n) call stack |
+| 3. Fibonacci | Recursion that builds the sequence one number per call | O(n²) | O(n) call stack |call stack |
 | 4. Intersection | Nested loops with a duplicate check | O(n × m) | O(k) |
 | 5. Symmetric difference | Two passes: keep items not found in the other list | O(n × m) | O(k) |
-| 6. Max occurrence | Split into characters, count letters/digits, find the maximum | O(n²)* | O(n) |
+| 6. Max occurrence | Split into characters, count letters/digits, find the maximum | O(n²) | O(n) |
 | 7. Square root | Binary search between 0 and x | O(log x) | O(1) |
-| 8. Anagram checker | Lowercase, count letters/digits, compare the counts | O(n²)* | O(n) |
+| 8. Anagram checker | Lowercase, count letters/digits, compare the counts | O(n²) | O(n) |
 | 9. Node path | Breadth-first search on an adjacency list | O(V + E) | O(V) |
-
-\* These can be reduced to O(n) by counting in a single pass (Problems 6 and 8) or by tracking the array length instead of recounting it (Problem 3). Each file's header comment explains its complexity and possible improvements in detail.
 
 ### Bonus challenges
 
