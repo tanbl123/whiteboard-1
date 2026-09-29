@@ -4,6 +4,8 @@ require_once __DIR__ . "/p9.php";
 
 class p9Test extends TestCase{
     public function testExample1DToB(): void{
+        // The question lists this as False, but the graph has the path
+        // D --> E --> F --> B (F has an arrow back to B).
         // expected: True (D --> E --> F --> B)
         $expected = ['exists' => true, 'path' => ['D', 'E', 'F', 'B']];
         $this->assertSame($expected, findPath(exampleGraph(), 'D', 'B'));

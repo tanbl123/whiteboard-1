@@ -23,6 +23,25 @@ Space: O(n) recursion depth (n calls waiting on the call stack). Each call may a
 get its own copy of the array when a new number is added, so total memory can grow 
 towards O(n^2).
 
+Bonus - Preventing stack overflow for large sequences:
+Every recursive call stays on the call stack until the final call
+returns, so a very large N (e.g. 100,000) can use up all available
+memory. Ways to prevent this:
+
+1. Use an iterative loop instead of recursion. A loop only needs the
+   last two numbers, so it runs in O(n) time with no call stack growth.
+   This is the most reliable solution.
+
+2. Limit the input size. PHP integers overflow after about 93
+   Fibonacci numbers (larger values become imprecise floats), so
+   capping N at 93 is sensible anyway.
+
+3. Pass the array by reference (&$arr) and track the length in a
+   variable, which avoids copying the array and recounting it on
+   every call.
+
+Note: PHP does not optimise tail calls, so rewriting the recursion in
+tail-call form alone does not prevent stack overflow in PHP.
 
 */
 

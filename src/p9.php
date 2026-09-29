@@ -41,6 +41,11 @@ A depth-first search would find *a* path, but not necessarily the
 shortest one. When several shortest paths exist (e.g. B -> C -> F and
 B -> E -> F), the one through the neighbour listed first is returned.
 
+Note on Example 1:
+The question lists D -> B as False, but the graph contains the path
+D --> E --> F --> B (F has an arrow back to B). This implementation
+returns True (D --> E --> F --> B), which matches the graph.
+
 Complexity (V = number of nodes, E = number of edges):
 Time:  O(V + E) - each node enters the queue at most once, and each
        edge is checked at most once. Rebuilding the path is O(V).

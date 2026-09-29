@@ -21,6 +21,24 @@ Each string is normalised and turned into a character count:
                        and punctuation: ['d' => 2, 'e' => 1, ...].
 The two strings are anagrams if their counts are equal.
 
+Lowercasing:
+ASCII letters are lowercased manually: uppercase and lowercase letters
+differ only by bit 32, so 'A' | ' ' gives 'a'. mb_strtolower() is used
+only for multi-byte (Unicode) characters, because case rules differ
+between scripts and would be impractical to reproduce by hand.
+Problem 8 does not forbid library functions.
+
+The counts are compared with == rather than ===, because the letters
+appear in a different order in each string. == checks that both arrays
+have the same keys and values in any order; === would also require
+the same key order.
+
+Note on Example 4:
+The question lists "restful" / "fluster" as NOT anagrams, but both
+words contain r, e, s, t, f, u, l exactly once each, so they are
+anagrams. This implementation returns true, which is correct by the
+question's own definition.
+
 Complexity (n and m = lengths of the two strings):
 Time:  O(n^2 + m^2) - countCharacters() uses numberExistence(),
                       which rescans the whole character array for each character.
