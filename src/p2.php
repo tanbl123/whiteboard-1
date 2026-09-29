@@ -12,7 +12,7 @@ For each number from 1 to 100:
 Approach:
 The logic is split into two functions:
 - fizzBuzz() converts a single number into its FizzBuzz value.
-- displayResult() loops from 1 to 100 and joins the values into one comma-separated string.
+- displayFizzBuzz() loops from 1 to 100 and joins the values into one comma-separated string.
 
 The "divisible by both 3 and 5" check must come first. If the "divisible by 3" check came 
 first, 15 would return "Fizz" and never reach the "FizzBuzz" case.

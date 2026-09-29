@@ -20,6 +20,12 @@ Approach (three steps, each in its own function):
 3. findMaxOccurrence() - loop through the counts and keep the
                          character with the highest count.
 
+Unicode (bonus):
+splitCharacters() reads the first byte of each character to find its
+length (1-4 bytes in UTF-8), so characters such as 'é' or '世' are
+kept whole. isLetterOrDigit() uses preg_match() with \p{L} and \p{N}
+to recognise letters and digits in any language. Problem 6 does not
+forbid library functions.
 
 Complexity (n = number of characters, u = number of unique characters):
 Time:  O(n^2) - for each character, numberExistence() scans the whole

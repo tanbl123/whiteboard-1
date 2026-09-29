@@ -5,7 +5,9 @@ Problem 1 - Sorting
 
 Approach: Bubble Sort
 Repeatedly compare neighbouring numbers and swap them if they are in the wrong order.
-The largest number will move to the end, the remaining
+
+After each pass the largest remaining number moves to the end,
+so each pass can check one fewer position (-$i in the inner loop).
 
 Time complexity: O(n^2)     -nested loop
 
